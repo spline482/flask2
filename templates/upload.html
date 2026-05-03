@@ -3,25 +3,24 @@
 {% block title %}Загрузка файлов{% endblock %}
 
 {% block content %}
-<h1>📤 Загрузка файлов</h1>
+<h1>Загрузка файлов</h1>
 
-<form method="POST" action="{{ url_for('upload_file') }}" enctype="multipart/form-data" style="max-width: 500px; margin: 0 auto;">
-    <div style="margin-bottom: 20px;">
-        <label for="file" style="display: block; margin-bottom: 10px; font-weight: 600; color: #555;">Выберите файл для загрузки:</label>
-        <input type="file" name="file" id="file" required 
-               style="width: 100%; padding: 10px; border: 2px dashed #667eea; border-radius: 5px; cursor: pointer;">
+<form method="POST" action="{{ url_for('upload_file') }}" enctype="multipart/form-data">
+    <div style="margin: 20px 0;">
+        <label for="file"><b>Выберите файл:</b></label><br><br>
+        <input type="file" name="file" id="file" required>
     </div>
-    
-    <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; margin-bottom: 20px; font-size: 14px;">
-        <strong>Разрешенные форматы:</strong> txt, pdf, png, jpg, jpeg, gif, doc, docx, xls, xlsx, zip, rar<br>
-        <strong>Запрещенные форматы:</strong> exe, sh, php, js, bat, cmd, com, scr, pif<br>
-        <strong>Максимальный размер:</strong> 16 MB
+
+    <div style="background: #f9f9f9; padding: 15px; border: 1px solid #ddd; margin: 20px 0;">
+        <b>Разрешенные форматы:</b> txt, pdf, png, jpg, jpeg, gif, doc, docx, xls, xlsx, zip, rar<br>
+        <b>Запрещенные форматы:</b> exe, sh, php, js, bat, cmd, com, scr, pif<br>
+        <b>Максимальный размер:</b> 16 MB
     </div>
-    
-    <button type="submit" class="btn" style="width: 100%;">Загрузить файл</button>
+
+    <button type="submit" class="btn">Загрузить файл</button>
 </form>
 
-<div style="margin-top: 30px; text-align: center;">
-    <a href="{{ url_for('view_files') }}" class="btn">📋 Посмотреть все файлы</a>
-</div>
+<p style="margin-top: 30px;">
+    <a href="{{ url_for('view_files') }}" class="btn">Посмотреть все файлы</a>
+</p>
 {% endblock %}
