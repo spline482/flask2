@@ -1,0 +1,21 @@
+# виртуальное окружение
+venv/
+env/
+.venv/
+
+# кэш python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# файлы с данным
+users.json
+
+# системные файлы
+.DS_Store
+Thumbs.db
+
+# логи и временные файлы
+*.log
+tmp/
