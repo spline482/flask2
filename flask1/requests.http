@@ -1,0 +1,25 @@
+### Получить все задачи
+GET http://127.0.0.1:5000/api/v1/tasks
+
+### Получить задачу по ID
+GET http://127.0.0.1:5000/api/v1/tasks/1
+
+### Создать задачу
+POST http://127.0.0.1:5000/api/v1/tasks
+Content-Type: application/json
+
+{
+  "title": "Новая задача",
+  "description": "Описание задачи"
+}
+
+### Обновить задачу
+PATCH http://127.0.0.1:5000/api/v1/tasks/1
+Content-Type: application/json
+
+{
+  "status": "completed"
+}
+
+### Удалить задачу
+DELETE http://127.0.0.1:5000/api/v1/tasks/1
