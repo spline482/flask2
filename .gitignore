@@ -1,9 +1,0 @@
-<<<<<<< HEAD
-venv/
-__pycache__/
-*.pyc
-instance/*.db
-=======
-.venv/
-
->>>>>>> ba4ba9be29accd2454544a77bd845a0ac4195458
