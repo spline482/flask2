@@ -1,2 +1,6 @@
-Flask==3.0.0
-Werkzeug==3.0.1
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+  </component>
+</project>
