@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<h1>Добро пожаловать!</h1>
+
+{% if current_user.is_authenticated %}
+    <p>Привет, {{ current_user.username }}!</p>
+    <p>Вы зарегистрированы: {{ current_user.registered_at }}</p>
+    <p>Последний вход: {{ current_user.last_login }}</p>
+
+    <p>
+        <a href="{{ url_for('register') }}">Зарегистрировать пользователя</a><br>
+        <a href="{{ url_for('users_list') }}">Список пользователей</a><br>
+        <a href="{{ url_for('logout') }}">Выйти</a>
+    </p>
+{% else %}
+    <p>Для доступа к функциям администратора необходимо авторизоваться.</p>
+    <p><a href="{{ url_for('login') }}">Войти в систему</a></p>
+{% endif %}
+
+<h2>О проекте</h2>
+<p>Это учебное Flask-приложение для демонстрации:</p>
+<ul>
+    <li>Аутентификации пользователей (Flask-Login)</li>
+    <li>Регистрации новых пользователей администратором</li>
+    <li>Хеширования паролей (werkzeug.security)</li>
+    <li>Валидации форм (Flask-WTF)</li>
+    <li>Хранения данных в JSON-файле</li>
+</ul>
+{% endblock %}
